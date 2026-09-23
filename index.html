@@ -1,110 +1,536 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RAPED | Protection de l’environnement et développement</title>
+<title>RAPED | Protection de l'environnement</title>
 
-  <meta name="description" content="Réseau d’Acteurs pour la Protection de l’Environnement et le Développement (RAPED).">
+<meta name="description" content="RAPED - Association engagée pour la protection de l'environnement et le développement communautaire.">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #18351d;
-      background: #f7faf5;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    header {
-      background: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #18351d;
+    background: #f7faf5;
+}
 
-    .topbar {
-      background: #176b2c;
-      color: white;
-      text-align: center;
-      padding: 8px 15px;
-      font-size: 14px;
-    }
+/* BARRE SUPERIEURE */
+
+.topbar {
+    background: #176b2c;
+    color: white;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-placeholder {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #176b2c, #65ad25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.brand {
+    color: #176b2c;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.brand-small {
+    font-size: 11px;
+    color: #555;
+    max-width: 330px;
+}
+
+.menu {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #214b28;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #65ad25;
+}
+
+/* ACCUEIL */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #176b2c;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #176b2c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #65ad25;
+}
+
+.btn-secondary {
+    background: white;
+    color: #176b2c;
+    border: 2px solid #176b2c;
+}
+
+.btn-secondary:hover {
+    background: #176b2c;
+    color: white;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 70px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #176b2c;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+/* CARTES */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #176b2c;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #555;
+}
+
+/* A PROPOS */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #e8f5e9;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-box p {
+    margin: 10px 0;
+}
+
+/* PIED DE PAGE */
+
+footer {
+    background: #176b2c;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* TELEPHONE */
+
+@media (max-width: 768px) {
 
     nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-placeholder {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #76c72c, #13752b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .brand {
-      color: #176b2c;
-      font-size: 27px;
-      font-weight: 900;
-    }
-
-    .brand-small {
-      font-size: 11px;
-      color: #555;
-      max-width: 330px;
+        flex-direction: column;
     }
 
     .menu {
-      display: flex;
-      gap: 18px;
-      list-style: none;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #214b28;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .menu a:hover {
-      color: #65ad25;
+        gap: 12px;
     }
 
     .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding:
+        min-height: 550px;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    Ensemble pour un environnement durable
+</div>
+
+<header>
+
+<nav>
+
+<div class="logo-area">
+
+<div class="logo-placeholder">
+    R
+</div>
+
+<div>
+    <div class="brand">RAPED</div>
+    <div class="brand-small">
+        Protection de l'environnement et développement communautaire
+    </div>
+</div>
+
+</div>
+
+<ul class="menu">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#actions">Nos actions</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="hero" id="accueil">
+
+<div class="hero-content">
+
+<h1>
+    Agir aujourd'hui pour protéger notre environnement
+</h1>
+
+<p>
+    RAPED œuvre pour la protection de l'environnement,
+    la sensibilisation des communautés et la promotion
+    d'un développement durable.
+</p>
+
+<div class="buttons">
+
+<a href="#apropos" class="btn btn-primary">
+    Découvrir RAPED
+</a>
+
+<a href="#contact" class="btn btn-secondary">
+    Nous contacter
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about" id="apropos">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>À propos de RAPED</h2>
+
+<p>
+    Une association engagée au service des communautés
+</p>
+
+</div>
+
+<div class="about-content">
+
+<p>
+    RAPED est une organisation engagée dans la protection
+    de l'environnement et l'amélioration des conditions
+    de vie des communautés.
+</p>
+
+<p>
+    Notre démarche repose sur la sensibilisation,
+    l'engagement citoyen et la participation des
+    populations aux actions de développement durable.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="actions">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Nos actions</h2>
+
+<p>
+    Des initiatives au service de l'environnement et des communautés
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🌱 Environnement</h3>
+
+<p>
+    Sensibilisation à la protection de l'environnement,
+    à la gestion responsable des ressources naturelles
+    et à la préservation de notre cadre de vie.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🤝 Communauté</h3>
+
+<p>
+    Actions communautaires et initiatives destinées
+    à renforcer la participation des populations
+    au développement local.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📚 Sensibilisation</h3>
+
+<p>
+    Information, éducation et mobilisation des citoyens
+    autour des enjeux environnementaux et sociaux.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Contactez-nous</h2>
+
+<p>
+    Nous sommes à votre écoute
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<p>
+    📍 Cameroun
+</p>
+
+<p>
+    📧 Contactez RAPED pour toute information
+</p>
+
+<p>
+    📞 Téléphone : à compléter
+</p>
+
+<br>
+
+<a href="mailto:contact@rapedassociation.org" class="btn btn-primary">
+    Nous écrire
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>
+    © 2026 RAPED — Tous droits réservés.
+</p>
+
+<p>
+    Protection de l'environnement • Engagement • Développement durable
+</p>
+
+</footer>
+
+</body>
+
+</html>
